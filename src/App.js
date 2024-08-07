@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="wrap">
       <h1>Welcome to my app</h1>
       <MyButton />
     </div>
