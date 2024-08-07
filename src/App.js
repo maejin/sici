@@ -12,11 +12,16 @@ function App() {
 
 
 function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
   return (
-    <button>
-      I'm a button
+    <button onClick={handleClick}>
+      Click me
     </button>
   );
 }
+
 
 export default App;
