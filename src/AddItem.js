@@ -5,7 +5,7 @@ export default function AddItem({ onAddItem }) {
   return (
     <>
       <input className="inpItem"
-        placeholder="Add item"
+        placeholder="필요한거 쓰기"
         value={title}
         onChange={e => setTitle(e.target.value)}
       />

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Cafe24SsurroundAir'; /* 사용할 폰트의 이름을 정의 */
+  src: url('./font/Cafe24SsurroundAir-v1.1.ttf'); /* 폰트 파일의 위치 */
+}
+
 .App {
   text-align: center;
 }
@@ -40,14 +45,15 @@
 }
 
 #root {
-  padding:20px
+  padding:20px;
+  font-family: 'Cafe24SsurroundAir';
 }
 
 hr { border:1px solid #2196F3 }
 button { margin-left:10px; border:none; padding:5px 10px; }
-li { list-style: none; padding:5px; font-size:15px; background:#2196F3; margin-bottom:5px; }
+li { list-style: none; padding:5px; font-size:15px; background:#c1e3ff; margin-bottom:5px; }
 ol, ul { padding-left:0px !important; }
 ul { margin-top:10px !important; }
-.regBtn { background:#ccc; }
-.inpItem { padding:5px; border:1px solid #ccc; }
+.regBtn { background:#ccc; margin-left:10px; border-radius:5px; }
+.inpItem { padding:5px; border:1px solid #ccc; border-radius:5px; }
 .delBtn { padding:5px 10px; font-size:12px; margin-left:10px; }

@@ -9,8 +9,8 @@ import PackingList from './PackingList.js';
 let nextId = 3;
 const initialItems = [
   { id: 0, title: '캐리어', packed: true},
-  { id: 1, title: 'Travel journal', packed: false},
-  { id: 2, title: 'Watercolors', packed: false},
+  { id: 1, title: '갈아입을 옷', packed: false},
+  { id: 2, title: '맛집 서치', packed: false},
 ];
 
 export default function TravelPlan() {
