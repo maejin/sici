@@ -8,8 +8,8 @@ export default function PackingList({
   return (
     <ul>
       {items.map(item => (
-        <li key={item.id}>
-          <label>
+        <li key={item.id} className={item.packed === true ? 'active' : ''}>
+          <label className="chkLabel">
             <input
               type="checkbox"
               checked={item.packed}

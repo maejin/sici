@@ -44,16 +44,26 @@
   }
 }
 
+body { display:flex; }
+
 #root {
+  width:100%;
+  max-width:720px;
   padding:20px;
   font-family: 'Cafe24SsurroundAir';
+  margin:auto;
 }
 
 hr { border:1px solid #2196F3 }
 button { margin-left:10px; border:none; padding:5px 10px; }
-li { list-style: none; padding:5px; font-size:15px; background:#c1e3ff; margin-bottom:5px; }
+li { list-style: none; padding:5px; font-size:15px; margin-bottom:5px; position:relative;}
+li.active { background:#c1e3ff; } 
 ol, ul { padding-left:0px !important; }
 ul { margin-top:10px !important; }
-.regBtn { background:#ccc; margin-left:10px; border-radius:5px; }
-.inpItem { padding:5px; border:1px solid #ccc; border-radius:5px; }
-.delBtn { padding:5px 10px; font-size:12px; margin-left:10px; }
+.inpArea { width:100%; padding:0px; margin:0px; }
+.regBtn { background:#ffd5d5; margin-left:10px; border-radius:5px; }
+.inpItem { padding:5px; border:1px solid #ccc; border-radius:5px; width:calc(100% - 70px); }
+.delBtn { padding:5px 10px; font-size:12px; margin-left:10px; position:absolute; right:5px; top:2px; }
+.chkLabel input { display:none; }
+.chkLabel { width:calc(100% - 50px);  cursor:pointer;  }
+li.active .chkLabel::before { content:"✔️" }
