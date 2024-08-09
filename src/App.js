@@ -6,6 +6,8 @@ import { useState } from 'react';
 import AddItem from './AddItem.js';
 import PackingList from './PackingList.js';
 
+import Axios from "axios";
+
 
 let nextId = 3;
 const initialItems = [
@@ -86,7 +88,7 @@ export default function TravelPlan() {
         }).catch((err: any) => {
             console.log(err);
         })}}>api 호출하기</Button>
-        
+
   */
 
 

@@ -79,6 +79,14 @@ export default function TravelPlan() {
     </div>
   );
 }
+
+ <Button onClick={() => {axios.get("http://maejin.github.io/sici:3006/api/todoData")
+        .then((res: any) => {
+            console.log(res);
+        }).catch((err: any) => {
+            console.log(err);
+        })}}>api 호출하기</Button>
+        
   */
 
 
