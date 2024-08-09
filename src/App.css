@@ -66,4 +66,5 @@ ul { margin-top:10px !important; }
 .delBtn { padding:7px 10px; font-size:12px; margin-left:10px; position:absolute; right:3px; top:5px; border-radius:3px; }
 .chkLabel input { display:none; }
 .chkLabel { width:calc(100% - 50px);  cursor:pointer;  }
-li.active .chkLabel::before { content:"✔️" }
+li .chkLabel::before { content:"⬜"}
+li.active .chkLabel::before { content:"✅" }
