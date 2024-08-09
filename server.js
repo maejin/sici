@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 
-const port = 5000; // 사용할 포트 번호
+const PORT = 3006; // 사용할 포트 번호
 const mysql = require("mysql2"); // 'mysql2' 모듈 사용
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 
 const app = express();
-app.use(cors()); // 모든 요청에 대해 CORS를 허용
+//app.use(cors()); // 모든 요청에 대해 CORS를 허용
 
 // MySQL 데이터베이스 연결 설정
 const connection = mysql.createConnection({
@@ -17,25 +17,27 @@ const connection = mysql.createConnection({
   port: 3306, // MySQL 포트 번호
 });
 
-// 데이터베이스 연결
-connection.connect((error) => {
-  if (error) {
-    return console.error("데이터베이스 연결 실패:", error);
-  }
-  console.log("데이터베이스에 성공적으로 연결됨");
+app.use(cors({
+    origin: "*",                // 출처 허용 옵션
+    credentials: true,          // 응답 헤더에 Access-Control-Allow-Credentials 추가
+    optionsSuccessStatus: 200,  // 응답 상태 200으로 설정
+}))
+
+// post 요청 시 값을 객체로 바꿔줌
+app.use(express.urlencoded({ extended: true })) 
+
+// 서버 연결 시 발생
+app.listen(PORT, () => {
+    console.log(`server running on port ${PORT}`);
 });
 
-// 데이터베이스 쿼리 실행 예제
-app.get("/hello", (req, res) => {
-  connection.query("SELECT VERSION()", (error, results, fields) => {
-    if (error) {
-      return res.send("쿼리 실행 실패: " + error.message);
-    }
-    res.send("데이터베이스 서버 버전: " + results[0]["VERSION()"]);
-  });
-});
 
-// 서버 실행
-app.listen(port, () => {
-  console.log(`Server listening at ${port}`);
+app.get("/api/todoData", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    
+    const sqlQuery = "SELECT * FROM todoData";
+
+    db.query(sqlQuery, (err, result) => {
+        res.send(result);
+    });
 });
