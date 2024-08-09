@@ -56,14 +56,14 @@ body { display:flex; }
 
 hr { border:1px solid #2196F3 }
 button { margin-left:10px; border:none; padding:5px 10px; }
-li { list-style: none; padding:10px; font-size:15px; margin-bottom:5px; position:relative; border:1px solid #dbdbdb; } 
-li.active { background:#c1e3ff; } 
+li { list-style: none; padding:10px; font-size:15px; margin-bottom:5px; position:relative; background:#e2f4ff; } 
+li.active { background:#b9defd; } 
 ol, ul { padding-left:0px !important; }
 ul { margin-top:10px !important; }
 .inpArea { width:100%; padding:0px; margin:0px; }
 .regBtn { background:#ffd5d5; margin-left:10px; border-radius:5px; }
 .inpItem { padding:5px; border:1px solid #ccc; border-radius:5px; width:calc(100% - 70px); }
-.delBtn { padding:7px 10px; font-size:12px; margin-left:10px; position:absolute; right:3px; top:5px; }
+.delBtn { padding:7px 10px; font-size:12px; margin-left:10px; position:absolute; right:3px; top:5px; border-radius:3px; }
 .chkLabel input { display:none; }
 .chkLabel { width:calc(100% - 50px);  cursor:pointer;  }
 li.active .chkLabel::before { content:"✔️" }
