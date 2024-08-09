@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sici/static/css/main.9c28766e.css",
+    "main.css": "/sici/static/css/main.02a8eea8.css",
     "main.js": "/sici/static/js/main.eb2b26c1.js",
     "static/js/453.f5d9f5a9.chunk.js": "/sici/static/js/453.f5d9f5a9.chunk.js",
     "static/media/Cafe24SsurroundAir-v1.1.ttf": "/sici/static/media/Cafe24SsurroundAir-v1.1.d8485cdd8e390bb99148.ttf",
     "index.html": "/sici/index.html",
-    "main.9c28766e.css.map": "/sici/static/css/main.9c28766e.css.map",
+    "main.02a8eea8.css.map": "/sici/static/css/main.02a8eea8.css.map",
     "main.eb2b26c1.js.map": "/sici/static/js/main.eb2b26c1.js.map",
     "453.f5d9f5a9.chunk.js.map": "/sici/static/js/453.f5d9f5a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c28766e.css",
+    "static/css/main.02a8eea8.css",
     "static/js/main.eb2b26c1.js"
   ]
 }
