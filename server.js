@@ -10,10 +10,10 @@ const app = express();
 
 // MySQL 데이터베이스 연결 설정
 const connection = mysql.createConnection({
-  host: "sic77.cafe24app.com", // 데이터베이스 호스트 주소
-  user: "heehye1", // 데이터베이스 사용자 이름
-  password: "gnlgnldhd@@", // 사용자 비밀번호
-  database: "heehye1", // 접속하려는 데이터베이스 이름
+  host: "", // 데이터베이스 호스트 주소
+  user: "", // 데이터베이스 사용자 이름
+  password: "", // 사용자 비밀번호
+  database: "", // 접속하려는 데이터베이스 이름
   port: 3306, // MySQL 포트 번호
 });
 
