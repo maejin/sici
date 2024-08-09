@@ -63,7 +63,8 @@ ul { margin-top:10px !important; }
 .inpArea { width:100%; padding:0px; margin:0px; }
 .regBtn { background:#ffd5d5; margin-left:10px; border-radius:5px; }
 .inpItem { padding:5px; border:1px solid #ccc; border-radius:5px; width:calc(100% - 70px); }
-.delBtn { padding:7px 10px; font-size:12px; margin-left:10px; position:absolute; right:3px; top:5px; border-radius:3px; }
+.delBtn { padding:7px 10px; font-size:12px; margin-left:10px; position:absolute; 
+  right:3px; top:5px; border-radius:3px; border:1px solid #cbcbcb; background:#fff; }
 .chkLabel input { display:none; }
 .chkLabel { width:calc(100% - 50px);  cursor:pointer;  }
 li .chkLabel::before { content:"⬜"}
