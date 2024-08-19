@@ -6,16 +6,44 @@ import { useState } from 'react';
 import AddItem from './AddItem.js';
 import PackingList from './PackingList.js';
 
+//import Axios from "axios";
+
 
 let nextId = 3;
-const initialItems = [
+/*const initialItems = [
   { id: 0, title: '캐리어', packed: false},
   { id: 1, title: '갈아입을 옷', packed: false},
   { id: 2, title: '맛집 서치', packed: false},
-];
+];*/
 
 export default function TravelPlan() {
-  const [items, setItems] = useState(initialItems);
+  const [items, setItems] = useState([]);
+
+  /*
+  useEffect(() => {
+    fetch('http://myapp77.cafe24app.com/getData')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setItems(data);
+      })
+  })
+  */
+
+fetch('http://myapp77.cafe24app.com/getData')
+  .then((response) => {
+    if(response.ok) {
+      return response.json();
+    }  
+    throw new Error('Network response was not ok.');
+  }).then((data) => {
+    console.log(JSON.stringify(data));
+  }).catch((error) => {
+    console.log(`error: ${error}`)
+});
+
+  //const [items, setItems] = useState(initialItems);
   const [total, setTotal] = useState(3);
   const [packed, setPacked] = useState(0);
 
@@ -86,7 +114,7 @@ export default function TravelPlan() {
         }).catch((err: any) => {
             console.log(err);
         })}}>api 호출하기</Button>
-        
+
   */
 
 

@@ -49,5 +49,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://maejin.github.io/sici/"
+  "homepage": "https://maejin.github.io/sici/",
+  "proxy": "http://myapp77.cafe24app.com"
 }
