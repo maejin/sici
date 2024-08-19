@@ -43,7 +43,6 @@ fetch('http://myapp77.cafe24app.com/getData')
     console.log(`error: ${error}`)
 });
 
-
   //const [items, setItems] = useState(initialItems);
   const [total, setTotal] = useState(3);
   const [packed, setPacked] = useState(0);
