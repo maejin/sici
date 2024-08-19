@@ -30,7 +30,6 @@ export default function TravelPlan() {
       })
   })
   */
-
 fetch('http://myapp77.cafe24app.com/getData')
   .then((response) => {
     if(response.ok) {
