@@ -5,20 +5,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import AddItem from './AddItem.js';
 import PackingList from './PackingList.js';
+import axios from 'axios'
+
 
 //import Axios from "axios";
 
 
 let nextId = 3;
-/*const initialItems = [
-  { id: 0, title: '캐리어', packed: false},
-  { id: 1, title: '갈아입을 옷', packed: false},
-  { id: 2, title: '맛집 서치', packed: false},
-];*/
+let initialItems = [];
+axios.get('http://myapp77.cafe24app.com/getData')
+.then(res => {
+  initialItems.push(...res.data);
+  //console.log( res.data );
+}) // { total: 7, users: User[] }
+
+console.log( initialItems );
+
 
 export default function TravelPlan() {
-  const [items, setItems] = useState([]);
-
   /*
   useEffect(() => {
     fetch('http://myapp77.cafe24app.com/getData')
@@ -30,6 +34,8 @@ export default function TravelPlan() {
       })
   })
   */
+
+/*
 fetch('http://myapp77.cafe24app.com/getData')
   .then((response) => {
     if(response.ok) {
@@ -37,13 +43,13 @@ fetch('http://myapp77.cafe24app.com/getData')
     }  
     throw new Error('Network response was not ok.');
   }).then((data) => {
-    console.log(JSON.stringify(data));
+    console.log(JSON.parse(data));
   }).catch((error) => {
     console.log(`error: ${error}`)
 });
+*/
 
-
-  //const [items, setItems] = useState(initialItems);
+  const [items, setItems] = useState(initialItems);
   const [total, setTotal] = useState(3);
   const [packed, setPacked] = useState(0);
 
@@ -58,7 +64,13 @@ fetch('http://myapp77.cafe24app.com/getData')
           packed: false
         }
       ])
-      //localStorage.setItem("item"+id, { "title": title, "packed":false });
+
+      axios.get('http://myapp77.cafe24app.com/setData?title='+title)
+      .then(res => {
+        console.log( '성공' );
+      })
+
+
     } else {
       alert("등록할게 없는디");
       return false;
