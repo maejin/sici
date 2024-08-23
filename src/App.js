@@ -16,7 +16,7 @@ let initialItems = [];
 axios.get('https://sici.life/getData')
 .then(res => {
   initialItems.push(...res.data);
-  console.log( res.data );
+  //console.log( res.data );
 }) // { total: 7, users: User[] }
 
 console.log( initialItems );
