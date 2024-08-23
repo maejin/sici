@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.58421d87.css",
-    "main.js": "/static/js/main.fc56c1d4.js",
-    "static/js/453.f5d9f5a9.chunk.js": "/static/js/453.f5d9f5a9.chunk.js",
-    "static/media/Cafe24SsurroundAir-v1.1.ttf": "/static/media/Cafe24SsurroundAir-v1.1.d8485cdd8e390bb99148.ttf",
-    "index.html": "/index.html",
-    "main.58421d87.css.map": "/static/css/main.58421d87.css.map",
-    "main.fc56c1d4.js.map": "/static/js/main.fc56c1d4.js.map",
-    "453.f5d9f5a9.chunk.js.map": "/static/js/453.f5d9f5a9.chunk.js.map"
+    "main.css": "/sici/static/css/main.dac2174b.css",
+    "main.js": "/sici/static/js/main.027ec11f.js",
+    "static/js/453.f5d9f5a9.chunk.js": "/sici/static/js/453.f5d9f5a9.chunk.js",
+    "static/media/Cafe24SsurroundAir-v1.1.ttf": "/sici/static/media/Cafe24SsurroundAir-v1.1.d8485cdd8e390bb99148.ttf",
+    "index.html": "/sici/index.html",
+    "main.dac2174b.css.map": "/sici/static/css/main.dac2174b.css.map",
+    "main.027ec11f.js.map": "/sici/static/js/main.027ec11f.js.map",
+    "453.f5d9f5a9.chunk.js.map": "/sici/static/js/453.f5d9f5a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58421d87.css",
-    "static/js/main.fc56c1d4.js"
+    "static/css/main.dac2174b.css",
+    "static/js/main.027ec11f.js"
   ]
 }
