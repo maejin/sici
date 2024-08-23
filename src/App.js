@@ -2,7 +2,7 @@
 import './App.css';
 //import MyButton from './Button.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AddItem from './AddItem.js';
 import PackingList from './PackingList.js';
 import axios from 'axios'
@@ -16,13 +16,17 @@ let nextId = 3;
 export default function TravelPlan() {
   
   let initialItems = [];
-  axios.get('https://sici.life/getData')
-  .then(res => {
-    initialItems.push(...res.data);
-    setItems(items.map(item => {
-      return item;
-    }));
-  }) // { total: 7, users: User[] }
+
+  useEffect(() => {
+    axios.get('https://sici.life/getData')
+    .then(res => {
+      initialItems.push(...res.data);
+      setItems(items.map(item => {
+        return item;
+      }));
+    }) // { total: 7, users: User[] }
+  }, []);
+  
 
 
   const [items, setItems] = useState(initialItems);
