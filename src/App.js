@@ -13,7 +13,7 @@ import axios from 'axios'
 
 let nextId = 3;
 let initialItems = [];
-axios.get('http://myapp77.cafe24app.com/getData')
+axios.get('https://sici.life/getData')
 .then(res => {
   initialItems.push(...res.data);
   console.log( res.data );
@@ -65,7 +65,7 @@ fetch('http://myapp77.cafe24app.com/getData')
         }
       ])
 
-      axios.get('http://myapp77.cafe24app.com/setData?title='+title)
+      axios.get('https://sici.life/setData?title='+title)
       .then(res => {
         console.log( '성공' );
       })
