@@ -19,9 +19,6 @@ axios.get('https://sici.life/getData')
   //console.log( res.data );
 }) // { total: 7, users: User[] }
 
-console.log( initialItems );
-
-
 export default function TravelPlan() {
   /*
   useEffect(() => {
@@ -53,6 +50,8 @@ fetch('http://myapp77.cafe24app.com/getData')
   const [total, setTotal] = useState(3);
   const [packed, setPacked] = useState(0);
 
+  console.log( items );
+  
   function handleAddItem(title) {
     if( title !== "" ) {
       setTotal(total + 1);
