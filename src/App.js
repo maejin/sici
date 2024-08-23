@@ -12,46 +12,23 @@ import axios from 'axios'
 
 
 let nextId = 3;
-let initialItems = [];
-axios.get('https://sici.life/getData')
-.then(res => {
-  initialItems.push(...res.data);
-  //console.log( res.data );
-}) // { total: 7, users: User[] }
 
 export default function TravelPlan() {
-  /*
-  useEffect(() => {
-    fetch('http://myapp77.cafe24app.com/getData')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setItems(data);
-      })
-  })
-  */
+  
+  let initialItems = [];
+  axios.get('https://sici.life/getData')
+  .then(res => {
+    initialItems.push(...res.data);
+    setItems(items.map(item => {
+      return item;
+    }));
+  }) // { total: 7, users: User[] }
 
-/*
-fetch('http://myapp77.cafe24app.com/getData')
-  .then((response) => {
-    if(response.ok) {
-      return response.json();
-    }  
-    throw new Error('Network response was not ok.');
-  }).then((data) => {
-    console.log(JSON.parse(data));
-  }).catch((error) => {
-    console.log(`error: ${error}`)
-});
-*/
 
   const [items, setItems] = useState(initialItems);
   const [total, setTotal] = useState(3);
   const [packed, setPacked] = useState(0);
 
-  console.log( items );
-  
   function handleAddItem(title) {
     if( title !== "" ) {
       setTotal(total + 1);
