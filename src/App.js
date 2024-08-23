@@ -16,7 +16,7 @@ let initialItems = [];
 axios.get('http://myapp77.cafe24app.com/getData')
 .then(res => {
   initialItems.push(...res.data);
-  //console.log( res.data );
+  console.log( res.data );
 }) // { total: 7, users: User[] }
 
 console.log( initialItems );
