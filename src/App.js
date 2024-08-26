@@ -38,18 +38,20 @@ export default function TravelPlan() {
 
       axios.get('https://sici.life/setData?title='+title)
       .then(res => {
-        console.log( res );
+        //console.log( res.insertId );
+        setTotal(total + 1);
+        setItems([
+          ...items,
+          {
+            id:res.insertId,
+            //id: nextId++,
+            title: title,
+            packed: false
+          }
+        ])
       })
 
-      setTotal(total + 1);
-      setItems([
-        ...items,
-        {
-          id: nextId++,
-          title: title,
-          packed: false
-        }
-      ])
+      
 
     } else {
       alert("등록할게 없는디");
