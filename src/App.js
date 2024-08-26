@@ -24,7 +24,7 @@ export default function TravelPlan() {
       setItems(items.map(item => {
         return item;
       }));
-    }) // { total: 7, users: User[] }
+    }) 
   }, []);
   
 
@@ -35,6 +35,12 @@ export default function TravelPlan() {
 
   function handleAddItem(title) {
     if( title !== "" ) {
+
+      axios.get('https://sici.life/setData?title='+title)
+      .then(res => {
+        console.log( '성공' );
+      })
+
       setTotal(total + 1);
       setItems([
         ...items,
@@ -44,12 +50,6 @@ export default function TravelPlan() {
           packed: false
         }
       ])
-
-      axios.get('https://sici.life/setData?title='+title)
-      .then(res => {
-        console.log( '성공' );
-      })
-
 
     } else {
       alert("등록할게 없는디");
@@ -77,6 +77,10 @@ export default function TravelPlan() {
     setItems(
       items.filter(item => item.id !== itemId)
     );
+    axios.get('https://sici.life/delData?id='+id)
+    .then(res => {
+      //console.log( '성공' );
+    })
   }
 
   return (
