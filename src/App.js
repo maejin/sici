@@ -77,7 +77,7 @@ export default function TravelPlan() {
     setItems(
       items.filter(item => item.id !== itemId)
     );
-    axios.get('https://sici.life/delData?id='+id)
+    axios.get('https://sici.life/delData?id='+item.id)
     .then(res => {
       //console.log( '성공' );
     })
