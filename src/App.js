@@ -57,8 +57,11 @@ export default function TravelPlan() {
   }
 
   function handleChangeItem(nextItem) {
+    
     if(nextItem.packed){
       setPacked(packed + 1);
+
+      console.log( nextItem.id );
 
       axios.get('https://sici.life/updateData?id='+nextItem.id+'&packed=1')
       .then(res => {
