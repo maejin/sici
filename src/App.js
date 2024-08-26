@@ -16,6 +16,8 @@ let nextId = 3;
 export default function TravelPlan() {
   
   let initialItems = [];
+  
+  let initotal = 0;
 
   useEffect(() => {
     axios.get('https://sici.life/getData')
@@ -24,13 +26,17 @@ export default function TravelPlan() {
       setItems(items.map(item => {
         return item;
       }));
-    }) 
+    })
+    
+    initotal = initialItems.length;
+    
   }, []);
+
   
 
 
   const [items, setItems] = useState(initialItems);
-  const [total, setTotal] = useState(3);
+  const [total, setTotal] = useState(initotal);
   const [packed, setPacked] = useState(0);
 
   function handleAddItem(title) {
@@ -57,7 +63,7 @@ export default function TravelPlan() {
   }
 
   function handleChangeItem(nextItem) {
-    
+
     if(nextItem.packed){
       setPacked(packed + 1);
 
