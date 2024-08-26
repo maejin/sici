@@ -38,7 +38,6 @@ export default function TravelPlan() {
 
       axios.get('https://sici.life/setData?title='+title)
       .then(res => {
-        //console.log( res.insertId );
         setTotal(total + 1);
         setItems([
           ...items,
@@ -51,8 +50,6 @@ export default function TravelPlan() {
         ])
       })
 
-      
-
     } else {
       alert("등록할게 없는디");
       return false;
@@ -62,8 +59,17 @@ export default function TravelPlan() {
   function handleChangeItem(nextItem) {
     if(nextItem.packed){
       setPacked(packed + 1);
+
+      axios.get('https://sici.life/updateData?id='+nextItem.id+'&packed=1')
+      .then(res => {
+      })
+
     } else {
       setPacked(packed - 1);
+
+      axios.get('https://sici.life/updateData?id='+nextItem.id+'&packed=0')
+      .then(res => {
+      })
     }
     setItems(items.map(item => {
       if(item.id === nextItem.id) {
