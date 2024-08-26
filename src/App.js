@@ -79,7 +79,7 @@ export default function TravelPlan() {
     );
     axios.get('https://sici.life/delData?id='+itemId)
     .then(res => {
-      //console.log( '성공' );
+      console.log( itemId );
     })
   }
 
