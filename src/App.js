@@ -38,7 +38,7 @@ export default function TravelPlan() {
 
       axios.get('https://sici.life/setData?title='+title)
       .then(res => {
-        console.log( '성공' );
+        console.log( res );
       })
 
       setTotal(total + 1);
@@ -77,10 +77,12 @@ export default function TravelPlan() {
     setItems(
       items.filter(item => item.id !== itemId)
     );
+
     axios.get('https://sici.life/delData?id='+itemId)
     .then(res => {
       console.log( itemId );
     })
+
   }
 
   return (
